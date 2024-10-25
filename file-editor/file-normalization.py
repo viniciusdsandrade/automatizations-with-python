@@ -49,9 +49,13 @@ def selecionar_arquivo():
     root.withdraw()  # Oculta a janela principal
     arquivo = filedialog.askopenfilename(
         title="Selecione um arquivo para normalizar",
-        filetypes=[("Arquivos TXT", "*.txt"),
-                   ("Arquivos PDF", "*.pdf"),
-                   ("Arquivos Word", "*.docx")]
+        filetypes=[
+            ("Arquivos TXT", "*.txt"),
+            ("Arquivos PDF", "*.pdf"),
+            ("Arquivos Word", "*.docx"),
+            ("Imagens", "*.jpeg *.jpg *.png *.gif *.bmp *.tiff"),
+            ("Vídeos", "*.mp4 *.avi *.mov *.mkv *.wmv *.flv *.webm")
+        ]
     )
     return arquivo
 
